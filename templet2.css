@@ -1,0 +1,130 @@
+/* start var */
+:root{
+    --main--color:#433878;
+    --main-line-height: 27.8px;
+    --second-color:#7E60BF;
+}
+
+/* start rules */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    background-color: black;
+  }
+  ul{
+    list-style: none;
+  }
+  .container{
+    padding-left:15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+/*  start @media */
+/* small */
+@media(min-width:768px){
+    .container{
+        width: 750px;
+    }
+}
+@media(min-width:992px){
+    .container{
+        width: 970px;
+    }
+}@media(min-width:1200px){
+    .container{
+         width:1170px ;
+    }
+}
+/* end  @media */
+html{
+    scroll-behavior: smooth;
+}
+/* start header */
+
+.header .container{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+position: relative;
+}
+.header .container::after{
+    content: "";
+    position: absolute;
+    background-color: #a2a2a2;
+    height: 2px;
+    width: calc(100% - 30px);
+    top: 89px;
+    z-index: 1;
+
+
+}
+.header .container .logo{
+    height: 100px;
+    padding-top: 30px;
+
+}
+.burger{
+    color: white;
+    font-size: 20px;
+display: none;}
+@media(max-width:768px){
+    .burger{
+        display: block;
+        background-color: aqua;
+    }
+}
+
+.header nav{
+    flex: 1 ;
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.header nav ul{
+    display: flex;
+}
+.header nav ul li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: .3s;
+    padding:  30px 20px;
+}
+.header nav ul li a:active  {
+    color: var(--second-color);
+    border-bottom: 2px solid var(--second-color);
+
+}        
+.header nav ul li a:hover{
+    color: var(--second-color);
+    border-bottom: 2px solid var(--second-color);
+    z-index: 1;
+}
+.header .form{
+     width: 40px ;
+     height: 30px;
+     margin-left:30px  ;
+    position: relative;
+    border-left: 2px solid #a2a2a2 ;
+}
+.header .form i{
+    color: white;
+    font-size: 20px;
+    padding-left: 15px;
+    padding-top: 5px;
+}
